@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>BMI Calculator</h1>
+            <p class="subtitle">Enter your height and weight below</p>
+        </header>
+
+        <main class="calculator-card">
+            <form action="/" method="post" class="space-y-6">
+                <div class="input-group">
+                    <label for="weight">Weight (kg)</label>
+                    <input type="text" id="weight" name="weight" placeholder="e.g: 50" required value="{{ weight }}">
+                </div>
+                <div class="input-group">
+                    <label for="height">Height (cm)</label>
+                    <input type="text" id="height" name="height" placeholder="e.g: 182" required value="{{ height }}">
+                </div>
+                <button type="submit" class="calc-button">
+                    Calculate BMI
+                </button>
+            </form>
+
+            {% if bmi %}
+            <div id="result" class="result-card {{ category_class }}">
+                <div class="result-line">
+                    <p class="result-label">BMI:</p>
+                    <p class="bmi-value">{{ bmi }}</p>
+                </div>
+                <div class="result-line">
+                    <p class="result-label">Category:</p>
+                    <p class="bmi-category">{{ category }}</p>
+                </div>
+            </div>
+            {% elif category %}
+            <div id="result" class="result-card {{ category_class }}">
+                 <p class="bmi-category error-message">
+                    {{ category }}
+                </p>
+            </div>
+            {% endif %}
+
+        </main>
+        <footer>
+            <p>Project for skill development</p>
+        </footer>
+    </div>
+</body>
+</html>
+
+

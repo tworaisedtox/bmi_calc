@@ -1,0 +1,164 @@
+body {
+    font-family: 'Courier New', monospace;
+    background-color: #1e1f22;
+    color: #dcddde;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 500px;
+    width: 100%;
+}
+
+header {
+    background-color: #2b2d31;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #40444b;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.2rem;
+    color: #ffffff;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    color: #b9bbbe;
+    font-size: 1rem;
+}
+
+.calculator-card {
+    background-color: #2b2d31;
+    padding: 30px;
+    border: 1px solid #40444b;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    color: #b9bbbe;
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    background-color: #383a40;
+    border: 1px solid #1e1f22;
+    color: #dcddde;
+    font-size: 1rem;
+    font-family: inherit;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: #5865F2;
+}
+
+.calc-button {
+    width: 100%;
+    background-color: #5865F2;
+    color: #ffffff;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 1.1rem;
+    transition: background-color 0.2s;
+}
+
+.calc-button:hover {
+    background-color: #4752c4;
+}
+
+.result-card {
+    margin-top: 30px;
+    padding: 20px;
+    border: 1px solid;
+}
+
+.result-line {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.result-line:last-child {
+    margin-bottom: 0;
+}
+
+.result-label {
+    font-size: 1.2rem;
+    color: #b9bbbe;
+}
+
+.bmi-value {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.bmi-category {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.underweight {
+    border-color: #faa61a;
+}
+.underweight .bmi-value, .underweight .bmi-category {
+    color: #faa61a;
+}
+
+.normal {
+    border-color: #43b581;
+}
+.normal .bmi-value, .normal .bmi-category {
+    color: #43b581;
+}
+
+.overweight {
+    border-color: #faa61a;
+}
+.overweight .bmi-value, .overweight .bmi-category {
+    color: #faa61a;
+}
+
+.obese {
+    border-color: #f04747;
+}
+.obese .bmi-value, .obese .bmi-category {
+    color: #f04747;
+}
+
+.error {
+    border-color: #f04747;
+}
+
+.error-message {
+    color: #f04747;
+    font-weight: bold;
+    text-align: center;
+}
+
+footer {
+    background-color: #2b2d31;
+    padding: 15px;
+    text-align: center;
+    border: 1px solid #40444b;
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #b9bbbe;
+}
+
+
